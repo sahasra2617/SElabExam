@@ -164,6 +164,38 @@ git pull origin main
 
 3. Use `git log --oneline` to see commits clearly.
 
+
+
+
+
+
+3)1) git init and push
+2)git config --global user.name "Sony"
+)git config --global user.email "Sony@gmail.com"
+
+
+
+
+3)a)git branch ui-fixes
+git checkout ui-fixes
+git fetch origin
+git rebase origin/main
+git push --set-upstream origin ui-fixes
+
+3)b)git stash
+git fetch origin
+git checkout main
+git reset origin/main
+git stash pop
+
+
+3)c)git checkout main
+git pull origin main
+git merge payment-module
+git add bookingcontroller.java
+git commit -m "Resolved conflict in BookingController.java"
+git push origin main
+
 ---
 
 If you want, I can **draw a simple flow diagram** showing **branches, commits, and steps** for all 6 scenarios, so it’s easy to visualize.
