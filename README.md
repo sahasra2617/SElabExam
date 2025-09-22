@@ -1,22 +1,3 @@
-**Scenario:** Your teammate force-pushed main; your local `main` is out of sync.
-
-**Steps:**
-
-```bash
-# Step 1: Backup your local main in case you have unpushed work
-git checkout -b backup-main
-
-# Step 2: Fetch latest changes from remote
-git fetch origin
-
-# Step 3: Reset local main to match remote
-git checkout main
-git reset --hard origin/main
-```
-
-✅ Local `main` now matches remote without losing your work (it's saved in `backup-main`).
-
----
 
 ## **3️⃣ Merge conflict in `booking.java` while merging payment-module**
 
